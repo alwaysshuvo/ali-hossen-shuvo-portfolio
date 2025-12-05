@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const containerVariants = {
@@ -10,7 +10,7 @@ const Contact = () => {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -19,38 +19,38 @@ const Contact = () => {
       y: 0,
       transition: { duration: 0.6 },
     },
-  }
+  };
 
   const contactMethods = [
     {
-      icon: '📧',
-      title: 'Email',
-      value: 'alihossenshuvo@gmail.com',
-      href: 'mailto:alihossenshuvo@gmail.com',
-      description: 'Send me an email',
+      icon: "📧",
+      title: "Email",
+      value: "alihossenshuvo@gmail.com",
+      href: "mailto:alihossenshuvo@gmail.com",
+      description: "Send me an email",
     },
     {
-      icon: '💬',
-      title: 'WhatsApp',
-      value: '+8801678606028',
-      href: 'https://wa.me/8801678606028',
-      description: 'Chat on WhatsApp',
+      icon: "💬",
+      title: "WhatsApp",
+      value: "+8801678606028",
+      href: "https://wa.me/8801678606028",
+      description: "Chat on WhatsApp",
     },
     {
-      icon: '💼',
-      title: 'LinkedIn',
-      value: 'Ali Hossen Shuvo',
-      href: 'https://www.linkedin.com/in/ali-hossen-shuvo',
-      description: 'Connect on LinkedIn',
+      icon: "💼",
+      title: "LinkedIn",
+      value: "Ali Hossen Shuvo",
+      href: "https://www.linkedin.com/in/ali-hossen-shuvo",
+      description: "Connect on LinkedIn",
     },
     {
-      icon: '🐙',
-      title: 'GitHub',
-      value: 'alwaysshuvo',
-      href: 'https://github.com/alwaysshuvo',
-      description: 'Check my repositories',
+      icon: "🐙",
+      title: "GitHub",
+      value: "alwaysshuvo",
+      href: "https://github.com/alwaysshuvo",
+      description: "Check my repositories",
     },
-  ]
+  ];
 
   return (
     <section id="contact" className="py-20 px-4">
@@ -84,14 +84,26 @@ const Contact = () => {
             <motion.a
               key={idx}
               href={method.href}
-              target={method.href.startsWith('http') && !method.href.startsWith('mailto:') ? '_blank' : '_self'}
-              rel={method.href.startsWith('http') && !method.href.startsWith('mailto:') ? 'noopener noreferrer' : ''}
+              target={
+                method.href.startsWith("http") &&
+                !method.href.startsWith("mailto:")
+                  ? "_blank"
+                  : "_self"
+              }
+              rel={
+                method.href.startsWith("http") &&
+                !method.href.startsWith("mailto:")
+                  ? "noopener noreferrer"
+                  : ""
+              }
               variants={itemVariants}
               whileHover={{ scale: 1.05, y: -5 }}
               className="group bg-gradient-to-br from-gray-900 to-gray-950 rounded-lg p-6 border border-gray-700 hover:border-primary transition-all duration-300 cursor-pointer"
             >
               <div className="text-4xl mb-4">{method.icon}</div>
-              <h3 className="text-xl font-bold text-white mb-2">{method.title}</h3>
+              <h3 className="text-xl font-bold text-white mb-2">
+                {method.title}
+              </h3>
               <p className="text-primary font-semibold mb-2">{method.value}</p>
               <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">
                 {method.description}
@@ -127,7 +139,8 @@ const Contact = () => {
           className="text-center"
         >
           <p className="text-gray-400 mb-6">
-            Looking for a dedicated developer? Let's create something amazing together!
+            Looking for a dedicated developer? Let's create something amazing
+            together!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
@@ -161,8 +174,10 @@ const Contact = () => {
           <p className="text-gray-400 mb-4">
             Prefer to review my experience first?
           </p>
+
           <motion.a
-            href="#resume"
+            href="/Ali_Hossen_Shuvo_Resume.pdf"
+            download="Ali_Hossen_Shuvo_Resume.pdf"
             whileHover={{ scale: 1.05 }}
             className="inline-block px-8 py-3 bg-gray-800 hover:bg-gray-700 text-primary border border-primary rounded-lg transition-all font-semibold"
           >
@@ -171,7 +186,7 @@ const Contact = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

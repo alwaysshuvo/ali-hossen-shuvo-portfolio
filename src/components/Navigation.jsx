@@ -1,28 +1,52 @@
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [active, setActive] = useState("");
 
   const navItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
-  ]
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+  ];
+
+  // Detect active section on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPos = window.scrollY + 200; // smooth offset
+
+      navItems.forEach((item) => {
+        const section = document.querySelector(item.href);
+        if (section) {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+
+          if (scrollPos >= top && scrollPos < top + height) {
+            setActive(item.href);
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-black bg-opacity-80 backdrop-blur-md border-b border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <motion.div
+          <motion.a
+            href="#hero"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-2xl font-bold text-gradient"
+            className="text-2xl font-bold cursor-pointer text-gradient"
           >
-            AS
-          </motion.div>
+            AHS
+          </motion.a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
@@ -33,9 +57,18 @@ const Navigation = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1 }}
-                className="text-gray-300 hover:text-primary transition-colors duration-300"
+                className={`relative text-gray-300 hover:text-primary transition-colors duration-300 
+                  ${active === item.href ? "text-primary font-semibold" : ""}`}
               >
                 {item.label}
+
+                {/* Active underline */}
+                {active === item.href && (
+                  <motion.div
+                    layoutId="active-underline"
+                    className="absolute left-0 right-0 -bottom-1 h-[2px] bg-primary rounded-full"
+                  ></motion.div>
+                )}
               </motion.a>
             ))}
           </div>
@@ -72,7 +105,12 @@ const Navigation = () => {
               <a
                 key={idx}
                 href={item.href}
-                className="block py-2 text-gray-300 hover:text-primary transition-colors"
+                className={`block py-2 transition-colors 
+                  ${
+                    active === item.href
+                      ? "text-primary font-semibold"
+                      : "text-gray-300 hover:text-primary"
+                  }`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -82,7 +120,7 @@ const Navigation = () => {
         )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
