@@ -54,21 +54,6 @@ const Projects = () => {
         'https://github.com/alwaysshuvo/Warmpows-Winter-Pet-Care-Service',
     },
 
-    {
-      title: 'Portfolio Website',
-      subtitle: 'Personal Developer Portfolio',
-      description:
-        'A modern, animated, responsive portfolio built to showcase my skills, projects, and full MERN development journey.',
-      features: [
-        '⚡ Animated UI with Framer Motion',
-        '📱 100% Responsive Layout',
-        '📝 Resume Download',
-        '🌐 Custom Project Pages',
-      ],
-      tech: ['React', 'TailwindCSS', 'Framer Motion', 'EmailJS'],
-      live: 'https://your-portfolio-link.com', // replace later
-      github: 'https://github.com/alwaysshuvo/ali-hossen-shuvo-portfolio',
-    },
   ]
 
   const containerVariants = {
