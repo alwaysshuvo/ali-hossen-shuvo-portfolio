@@ -108,7 +108,7 @@ const Hero = () => {
         {/* Social Links */}
         <motion.div
           variants={itemVariants}
-          className="flex gap-6 justify-center items-center"
+            className="flex gap-6 justify-center items-center mb-[50px]"
         >
           <motion.a
             href="https://github.com/alwaysshuvo"
@@ -161,7 +161,7 @@ const Hero = () => {
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
       >
         <svg
-          className="w-6 h-6 text-primary"
+          className="w-7 h-7 text-primary -mb-[20px]  "
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

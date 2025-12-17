@@ -3,8 +3,8 @@ import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-4 bg-black bg-opacity-40">
-      <div className="max-w-4xl mx-auto">
+    <section id="about" className="py-20 px-4 bg-black bg-opacity-40 ">
+      <div className="max-w-4xl mx-auto mt-">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
