@@ -4,6 +4,30 @@ import { motion } from 'framer-motion'
 const Projects = () => {
   const projects = [
     {
+  title: 'CityFix',
+  subtitle: 'Report, Track & Resolve Public Infrastructure Issues',
+  description:
+    'A public issue reporting platform where citizens can report city problems and track resolution progress through role-based dashboards.',
+  features: [
+    '📝 Issue reporting with image upload & location details',
+    '📊 Role-based dashboards (Citizen, Staff, Admin)',
+    '🔄 Real-time issue status tracking',
+    '🔐 Secure authentication & access control',
+  ],
+  tech: [
+    'React',
+    'TailwindCSS',
+    'Axios',
+    'Firebase',
+    'Express',
+    'MongoDB',
+  ],
+  live: 'https://cityfix-c2383.web.app', 
+  github: 'https://github.com/alwaysshuvo/CityFix-Report-Track-Resolve',
+  server: 'https://github.com/alwaysshuvo/CityFix-Report-Track-Resolve-Server',
+},
+
+    {
       title: 'ProductHub',
       subtitle: 'Full Stack E-commerce & Product Management',
       description:
