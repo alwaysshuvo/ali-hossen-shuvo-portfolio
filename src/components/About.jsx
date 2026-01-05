@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -18,79 +18,85 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-gray-900 bg-opacity-50 rounded-lg p-8 border border-gray-700 hover:border-primary transition-colors duration-300"
+          className="bg-gray-900 bg-opacity-50 rounded-xl p-8 border border-gray-700 hover:border-primary transition-all duration-300"
         >
-          <p className="text-lg text-gray-300 leading-relaxed mb-6">
-            I'm <span className="text-primary font-semibold">Ali Hossen Shuvo</span>, a passionate Junior Full Stack Developer 
-            based in <span className="text-primary font-semibold">Uttara, Dhaka, Bangladesh</span>. 
-            I specialize in building modern, responsive web applications using the MERN stack 
-            (MongoDB, Express.js, React, Node.js).
-          </p>
-
-          <p className="text-lg text-gray-300 leading-relaxed mb-6">
-            With a strong foundation in both frontend and backend development, I create 
-            scalable solutions that solve real-world problems. I'm passionate about writing clean, 
-            maintainable code and constantly learning new technologies to stay ahead in the 
-            ever-evolving tech landscape.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-r from-primary to-secondary p-1 rounded-lg"
-            >
-              <div className="bg-gray-900 rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold text-primary mb-2">5+</div>
-                <p className="text-gray-300">Projects Completed</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-r from-primary to-secondary p-1 rounded-lg"
-            >
-              <div className="bg-gray-900 rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold text-primary mb-2">100%</div>
-                <p className="text-gray-300">Dedicated to Quality</p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-r from-primary to-secondary p-1 rounded-lg"
-            >
-              <div className="bg-gray-900 rounded-lg p-4 text-center">
-                <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-                <p className="text-gray-300">Always Learning</p>
-              </div>
-            </motion.div>
+          {/* Who I Am */}
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold text-primary mb-2">
+              👋 Who I Am
+            </h3>
+            <p className="text-gray-300 leading-relaxed">
+              I'm{" "}
+              <span className="font-semibold text-white">Ali Hossen Shuvo</span>
+              , a passionate Junior Full Stack Developer based in Uttara, Dhaka,
+              Bangladesh. I specialize in building modern, responsive web
+              applications using the MERN stack (MongoDB, Express.js, React,
+              Node.js).
+            </p>
           </div>
 
-          <div className="mt-8 pt-8 border-t border-gray-700">
-            <p className="text-gray-400 text-center mb-4 font-semibold">Quick Contact</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.a
-                href="mailto:alihossenshuvo@gmail.com"
+          {/* Programming Journey */}
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold text-primary mb-2">
+              🚀 My Programming Journey
+            </h3>
+            <p className="text-gray-300 leading-relaxed">
+              My journey into programming began with curiosity about how
+              websites work, which gradually turned into a deep passion for full
+              stack development. I enjoy transforming ideas into real-world
+              applications through clean, scalable, and maintainable code.
+            </p>
+          </div>
+
+          {/* What I Enjoy */}
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold text-primary mb-2">
+              💻 What I Love to Do
+            </h3>
+            <p className="text-gray-300 leading-relaxed">
+              I love building user-friendly interfaces, solving backend
+              challenges, and continuously improving my skills by learning new
+              technologies and best practices.
+            </p>
+          </div>
+
+          {/* Beyond Coding */}
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-primary mb-2">
+              🎵 Beyond Coding
+            </h3>
+            <p className="text-gray-300 leading-relaxed">
+              Outside of programming, I enjoy listening to music, exploring
+              tech-related content, and staying updated with the latest trends
+              in the tech world.
+            </p>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              { value: "5+", label: "Projects Completed" },
+              { value: "100%", label: "Dedicated to Quality" },
+              { value: "24/7", label: "Always Learning" },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
                 whileHover={{ scale: 1.05 }}
-                className="px-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-gray-300"
+                className="bg-gradient-to-r from-primary to-secondary p-[2px] rounded-lg"
               >
-                📧 alihossenshuvo@gmail.com
-              </motion.a>
-              <motion.a
-                href="https://wa.me/8801678606028"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                className="px-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-gray-300"
-              >
-                💬 +8801678606028
-              </motion.a>
-            </div>
+                <div className="bg-gray-900 rounded-lg p-4 text-center">
+                  <div className="text-3xl font-bold text-primary mb-1">
+                    {item.value}
+                  </div>
+                  <p className="text-gray-300">{item.label}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

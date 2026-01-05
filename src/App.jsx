@@ -6,6 +6,7 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Navigation from './components/Navigation'
 import './index.css'
+import Experience from './components/Experience'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <Experience />
       <Projects />
       <Contact />
       <footer className="bg-black bg-opacity-50 text-center py-6 border-t border-gray-700">

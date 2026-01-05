@@ -22,7 +22,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-20 px-4 bg-gradient-dark relative overflow-hidden">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center pt-20 px-4 bg-gradient-dark relative overflow-hidden"
+    >
       {/* Animated gradient orbs */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
       <div className="absolute top-40 right-10 w-72 h-72 bg-secondary opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
@@ -95,6 +98,18 @@ const Hero = () => {
           >
             View My Work
           </motion.a>
+
+          {/* Resume Button */}
+          <motion.a
+            href="/Ali_Hossen_Shuvo_Resume.pdf"
+            download
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 bg-transparent border-2 border-secondary text-secondary font-semibold rounded-lg hover:bg-secondary hover:text-white transition-all duration-300"
+          >
+            Download Resume
+          </motion.a>
+
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.05 }}
@@ -108,7 +123,7 @@ const Hero = () => {
         {/* Social Links */}
         <motion.div
           variants={itemVariants}
-            className="flex gap-6 justify-center items-center mb-[50px]"
+          className="flex gap-6 justify-center items-center mb-[50px]"
         >
           <motion.a
             href="https://github.com/alwaysshuvo"

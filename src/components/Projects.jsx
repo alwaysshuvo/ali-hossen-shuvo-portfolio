@@ -1,208 +1,204 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const projects = [
     {
-  title: 'CityFix',
-  subtitle: 'Report, Track & Resolve Public Infrastructure Issues',
-  description:
-    'A public issue reporting platform where citizens can report city problems and track resolution progress through role-based dashboards.',
-  features: [
-    '📝 Issue reporting with image upload & location details',
-    '📊 Role-based dashboards (Citizen, Staff, Admin)',
-    '🔄 Real-time issue status tracking',
-    '🔐 Secure authentication & access control',
-  ],
-  tech: [
-    'React',
-    'TailwindCSS',
-    'Axios',
-    'Firebase',
-    'Express',
-    'MongoDB',
-  ],
-  live: 'https://cityfix-c2383.web.app', 
-  github: 'https://github.com/alwaysshuvo/CityFix-Report-Track-Resolve',
-  server: 'https://github.com/alwaysshuvo/CityFix-Report-Track-Resolve-Server',
-},
-
-    {
-      title: 'ProductHub',
-      subtitle: 'Full Stack E-commerce & Product Management',
+      title: "CityFix",
+      image: "https://i.ibb.co.com/QjC5yWcS/City-Fix-Thumbnail.png",
       description:
-        'A comprehensive MERN e-commerce platform with authentication, product CRUD, admin dashboard, categories, ratings, and a persistent cart system.',
+        "CityFix is a public infrastructure issue reporting platform where citizens can report city problems, track resolution progress, and interact with authorities through role-based dashboards.",
       features: [
-        '🔐 Google + Password Authentication',
-        '🛒 Persistent MongoDB Cart',
-        '📦 Product CRUD + Categories',
-        '📊 Admin Dashboard',
+        "Issue reporting with image & location",
+        "Citizen, Staff & Admin dashboards",
+        "Real-time issue tracking",
+        "Authentication & role-based access",
       ],
-      tech: ['Next.js', 'React', 'Express.js', 'MongoDB', 'TailwindCSS'],
-      live: 'https://product-hub-simplify-your-product-m.vercel.app/',
-      github:
-        'https://github.com/alwaysshuvo/ProductHub-Simplify-Your-Product-Management',
+      tech: [
+        "React",
+        "TailwindCSS",
+        "Firebase",
+        "Express.js",
+        "MongoDB",
+      ],
+      live: "https://cityfix-c2383.web.app",
+      client:
+        "https://github.com/alwaysshuvo/CityFix-Report-Track-Resolve",
+      server:
+        "https://github.com/alwaysshuvo/CityFix-Report-Track-Resolve-Server",
     },
-
     {
-      title: 'MovieMaster Pro',
-      subtitle: 'Movie Watchlist Platform',
+      title: "ProductHub",
+      image: "https://i.ibb.co.com/F4hVq4dC/Product-Hub-Thumbnail.png",
       description:
-        'A movie management system where users can browse movies, save watchlists, switch themes, and enjoy smooth UI animations.',
+        "ProductHub is a full-stack e-commerce and product management platform where users can browse products, manage carts, and admins can manage inventory in real time.",
       features: [
-        '🎬 Add/Update/Delete Movies',
-        '❤️ User Watchlist',
-        '🔐 Firebase Authentication',
-        '🌓 Light/Dark Theme',
+        "Google & credential authentication",
+        "Persistent shopping cart",
+        "Admin dashboard & product CRUD",
+        "Category & rating system",
       ],
-      tech: ['React', 'Firebase', 'TailwindCSS', 'Express', 'MongoDB'],
-      live: 'https://movie-matrix10.netlify.app/',
-      github: 'https://github.com/alwaysshuvo/moviemaster-pro',
-      server: 'https://github.com/alwaysshuvo/moviemaster-pro-server',
+      tech: [
+        "Next.js",
+        "Redux Toolkit",
+        "Express.js",
+        "MongoDB",
+        "TailwindCSS",
+      ],
+      live:
+        "https://product-hub-simplify-your-product-m.vercel.app/",
+      client:
+        "https://github.com/alwaysshuvo/ProductHub-Simplify-Your-Product-Management",
     },
-
     {
-      title: 'Warmpaws',
-      subtitle: 'Winter Pet Care Service',
+      title: "MovieMaster Pro",
+      image: "https://i.ibb.co.com/sJHJDByN/Movie-Matrix-Thumbnail.png",
       description:
-        'A pet care service for winter clothing, grooming tips, and secure authentication with a modern responsive UI.',
+        "MovieMaster Pro is a movie collection and watchlist platform that allows users to browse movies, manage watchlists, filter content, and enjoy a modern UI experience.",
       features: [
-        '🐾 Winter Pet Care Services',
-        '👕 Pet Clothing Store',
-        '✂️ Grooming & Tips',
-        '🔐 Firebase Authentication',
+        "Movie CRUD system",
+        "User watchlist",
+        "Firebase authentication",
+        "Light & dark theme",
       ],
-      tech: ['React', 'Firebase', 'TailwindCSS', 'Express', 'MongoDB'],
-      live: 'https://warpaws-pet-care.netlify.app/',
-      github:
-        'https://github.com/alwaysshuvo/Warmpows-Winter-Pet-Care-Service',
+      tech: [
+        "React",
+        "Firebase",
+        "Express.js",
+        "MongoDB",
+        "TailwindCSS",
+      ],
+      live: "https://movie-matrix10.netlify.app/",
+      client: "https://github.com/alwaysshuvo/moviemaster-pro",
+      server:
+        "https://github.com/alwaysshuvo/moviemaster-pro-server",
     },
-
-  ]
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
+    {
+      title: "Warmpaws",
+      image: "https://i.ibb.co.com/8gjNGQSP/Warm-Paws-Thumbnail.png",
+      description:
+        "Warmpaws is a winter pet care platform offering pet clothing, grooming tips, and secure authentication with a responsive and user-friendly design.",
+      features: [
+        "Pet care services",
+        "Winter clothing showcase",
+        "Firebase authentication",
+        "Responsive UI",
+      ],
+      tech: [
+        "React",
+        "Firebase",
+        "Express.js",
+        "MongoDB",
+        "TailwindCSS",
+      ],
+      live: "https://warpaws-pet-care.netlify.app/",
+      client:
+        "https://github.com/alwaysshuvo/Warmpows-Winter-Pet-Care-Service",
     },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  }
+  ];
 
   return (
     <section id="projects" className="py-20 px-4 bg-black bg-opacity-40">
       <div className="max-w-6xl mx-auto">
-
-        {/* Section Title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient"
+          className="text-4xl md:text-5xl font-bold text-center mb-16 text-gradient"
         >
           Featured Projects
         </motion.h2>
 
-        {/* Projects List */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          className="space-y-8"
-        >
+        <div className="space-y-10">
           {projects.map((project, idx) => (
             <motion.div
               key={idx}
-              variants={itemVariants}
-              className="bg-gray-900 border border-gray-700 rounded-lg p-8 hover:border-primary transition-all duration-300 shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col md:flex-row gap-8 bg-gray-900 border border-gray-700 rounded-xl p-8 hover:border-primary transition-all"
             >
-              {/* Header */}
-              <h3 className="text-3xl font-bold text-white mb-2">
-                {project.title}
-              </h3>
-              <p className="text-gray-400 text-lg mb-6">{project.subtitle}</p>
-
-              {/* Description */}
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                {project.description}
-              </p>
-
-              {/* Features */}
-              <div className="mb-6">
-                <h4 className="text-primary font-semibold mb-3">
-                  ✨ Key Features
-                </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {project.features.map((item, i) => (
-                    <p key={i} className="text-gray-300 text-sm">
-                      {item}
-                    </p>
-                  ))}
-                </div>
+              {/* Thumbnail */}
+              <div className="md:w-1/3 h-60 bg-gray-800 rounded-lg overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
               </div>
 
-              {/* Tech Stack */}
-              <div className="mb-6">
-                <h4 className="text-primary font-semibold mb-3">
-                  🛠 Tech Stack
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, t) => (
+              {/* Content */}
+              <div className="md:w-2/3">
+                <h3 className="text-3xl font-bold text-white mb-3">
+                  {project.title}
+                </h3>
+
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+
+                {/* Features */}
+                <ul className="list-disc list-inside text-gray-300 text-sm mb-4 space-y-1">
+                  {project.features.map((f, i) => (
+                    <li key={i}>{f}</li>
+                  ))}
+                </ul>
+
+                {/* Tech */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tech.map((t, i) => (
                     <span
-                      key={t}
-                      className="px-3 py-1 bg-gray-800 border border-gray-600 rounded-full text-xs text-gray-300"
+                      key={i}
+                      className="px-3 py-1 text-xs bg-gray-800 border border-gray-600 rounded-full text-gray-300"
                     >
-                      {tech}
+                      {t}
                     </span>
                   ))}
                 </div>
-              </div>
 
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-700">
-                <motion.a
-                  href={project.live}
-                  target="_blank"
-                  whileHover={{ scale: 1.05 }}
-                  className="flex-1 px-6 py-3 bg-primary text-white font-semibold rounded-lg text-center hover:opacity-90"
-                >
-                  🌐 Live Demo
-                </motion.a>
-
-                <motion.a
-                  href={project.github}
-                  target="_blank"
-                  whileHover={{ scale: 1.05 }}
-                  className="flex-1 px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg text-center hover:bg-primary hover:text-black"
-                >
-                  💻 GitHub
-                </motion.a>
-
-                {project.server && (
-                  <motion.a
-                    href={project.server}
+                {/* Actions */}
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href={project.live}
                     target="_blank"
-                    whileHover={{ scale: 1.05 }}
-                    className="flex-1 px-6 py-3 border-2 border-gray-600 text-gray-300 font-semibold rounded-lg text-center hover:border-primary hover:text-primary"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2 bg-primary text-white rounded-lg font-semibold"
                   >
-                    ⚙ Server
-                  </motion.a>
-                )}
+                    Live Demo
+                  </a>
+
+                  {/* GitHub Dropdown */}
+                  <div className="relative group">
+                    <button className="px-5 py-2 border border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-black">
+                      GitHub
+                    </button>
+                    <div className="absolute left-0 top-full mt-2 bg-gray-900 border border-gray-700 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20">
+                      <a
+                        href={project.client}
+                        target="_blank"
+                        className="block px-4 py-2 text-sm hover:bg-gray-800"
+                      >
+                        Client Repository
+                      </a>
+                      {project.server && (
+                        <a
+                          href={project.server}
+                          target="_blank"
+                          className="block px-4 py-2 text-sm hover:bg-gray-800"
+                        >
+                          Server Repository
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
